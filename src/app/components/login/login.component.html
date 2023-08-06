@@ -1,4 +1,7 @@
-<div class="container">
+<div *ngIf="loginservice.isNewUser; then signup else login">
+</div>
+<ng-template #login>
+  <div class="container">
     <div class="row justify-content-center align-items-center min-vh-100">
       <div class="col-md-6">
         <div class="login-container">
@@ -37,11 +40,16 @@
   
             <!-- Register buttons -->
             <div class="text-center">
-              <p>Not a member? <a href="#!">Register</a></p>
+              <p>Not a member? <label class="new-account" (click)="newUserAccount()">Register</label></p>
             </div>
           </form>
         </div>
       </div>
     </div>
   </div>
+</ng-template>
+<ng-template #signup>
+  <app-signup [emailValue]="loginForm.value.username" (emailValueChange)="onEmailChanged($event)"></app-signup>
+</ng-template>
+
   
