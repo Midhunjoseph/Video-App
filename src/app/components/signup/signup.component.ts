@@ -34,7 +34,16 @@ export class SignupComponent implements OnInit {
     if(this.registerForm.valid){
       const formData = this.registerForm.value;
       console.log("register",formData);
-      
+      this.loginService.signup(formData).subscribe(
+        result => {
+          console.log(result);
+          
+        },
+        (err) =>{
+          console.log(err);
+          
+        }
+      )
     }
   }
 

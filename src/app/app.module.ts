@@ -7,6 +7,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VcApiConstants } from './utils/VcApiConstants';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
-  providers: [],
+  providers: [VcApiConstants],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
