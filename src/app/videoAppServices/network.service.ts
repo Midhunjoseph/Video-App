@@ -20,6 +20,18 @@ export class NetworkService {
     return this.http.post(environment.urls.baseUrl + url, params,httpOptions)
   }
 
+  // postRequest(params, url, showLoader?: boolean): Observable<any> {
+  //   this.setRequestHeader();
+  //   return this.http.post(environment.urls.baseUrl + url, params,
+  //          {headers: this.httpHeader, reportProgress: true})
+  //          .pipe(map(this.extractData));
+  // }
+  // public getRequest(url, showLoader?: boolean): Observable<any> {
+  //   this.setRequestHeader();
+  //   return this.http.get( environment.urls.baseUrl + url, {headers: this.httpHeader})
+  //   .pipe(map(this.extractData));
+  // }
+
   // private setRequestHeader() {
   //   let userInfo = localStorage.getItem(this.fbConstants.localStorageItems.userInfo);
   //   if (userInfo !== null) {

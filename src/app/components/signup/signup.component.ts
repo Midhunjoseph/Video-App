@@ -19,13 +19,13 @@ export class SignupComponent implements OnInit {
       this.loginService.isNewUser = true;
       this.registerForm = this.formBuilder.group({
         username: ['', Validators.required],
-        useremail: ['',Validators.required],
+        email: ['',Validators.required],
         password: ['', Validators.required]
       })
 
       if(this.emailValue !== null){
         this.registerForm.patchValue({
-          useremail: this.emailValue
+          email: this.emailValue
         })
       }
   }
@@ -49,7 +49,7 @@ export class SignupComponent implements OnInit {
 
   public onClickLogin(){
     this.loginService.isNewUser= false;
-    this.emailValueChange.emit(this.registerForm.value.useremail)
+    this.emailValueChange.emit(this.registerForm.value.email)
     console.log("gare");
     
   }

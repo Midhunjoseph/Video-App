@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VcApiConstants } from './utils/VcApiConstants';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { VcApiConstants } from './utils/VcApiConstants';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    
+    HttpClientModule
   ],
   providers: [VcApiConstants],
   bootstrap: [AppComponent]

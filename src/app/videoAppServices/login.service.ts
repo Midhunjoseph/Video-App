@@ -16,4 +16,8 @@ export class LoginService {
     console.log(params);
     return this.networkservice.postRequest(params, this.vcApiConstants.ApiUrls.register)
   }
+
+  public login(params: any):Observable<any>{
+    return this.networkservice.postRequest(params, this.vcApiConstants.ApiUrls.login)
+  }
 }
