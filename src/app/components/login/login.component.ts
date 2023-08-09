@@ -26,6 +26,16 @@ export class LoginComponent implements OnInit {
       const formData = this.loginForm.value;
       // Here you can handle the login logic, e.g., authentication.
       console.log('Login form submitted:', formData);
+      this.loginservice.login(formData).subscribe(
+        result =>{
+          console.log(result);
+          
+        },
+        (err)=>{
+          console.log(err);
+          
+        }
+      )
     }
   }
 
