@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { VcConstants } from 'src/app/utils/vc-Constants';
 import { LoginService } from 'src/app/videoAppServices/login.service';
 
 @Component({
@@ -11,7 +13,9 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup = new FormGroup({})
 
   constructor(private formbuilder:FormBuilder,
-    public loginservice: LoginService){}
+    public loginservice: LoginService,
+    private snackbar: MatSnackBar,
+    private vcConstants: VcConstants){}
 
   ngOnInit(): void {
     this.loginservice.isNewUser= false;
@@ -32,8 +36,10 @@ export class LoginComponent implements OnInit {
           
         },
         (err)=>{
-          console.log(err);
-          
+          this.snackbar.open(this.vcConstants.dialogMessage.invalidPassword,'',{
+            duration: 3000,
+            panelClass: this.vcConstants.snackbarType.error
+          })
         }
       )
     }

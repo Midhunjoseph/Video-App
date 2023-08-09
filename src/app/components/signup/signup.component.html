@@ -2,23 +2,23 @@
     <div class="row justify-content-center align-items-center min-vh-100">
       <div class="col-md-6">
         <div class="login-container">
-          <h4>Register here</h4>
+          <h4 class="login-heading pb-3">Register here</h4>
           <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <!-- Name input -->
             <div class="form-outline mb-4">
-                <input type="email" class="form-control" formControlName="username" />
-                <label class="form-label" >Name</label>
-              </div>
+              <label class="form-label left-label" >Name</label>
+              <input type="email" class="form-control" formControlName="username" />
+            </div>
             <!-- Email input -->
             <div class="form-outline mb-4">
+              <label class="form-label left-label" >Email address</label>
               <input type="email" class="form-control" formControlName="email" />
-              <label class="form-label" >Email address</label>
             </div>
   
             <!-- Password input -->
             <div class="form-outline mb-4">
+              <label class="form-label left-label">Password</label>
               <input type="password" class="form-control" formControlName="password" />
-              <label class="form-label">Password</label>
             </div>
   
             <!-- Submit button -->

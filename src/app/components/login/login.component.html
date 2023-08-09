@@ -2,21 +2,21 @@
 </div>
 <ng-template #login>
   <div class="container">
-    <div class="row justify-content-center align-items-center min-vh-100">
+    <div class="row min-vh-100">
       <div class="col-md-6">
         <div class="login-container">
-          <h4>Login here</h4>
+          <h4 class="login-heading pb-3">Login here</h4>
           <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <!-- Email input -->
             <div class="form-outline mb-4">
+              <label class="form-label left-label" for="form2Example1">Email address</label>
               <input type="email" class="form-control" formControlName="username" />
-              <label class="form-label" for="form2Example1">Email address</label>
             </div>
   
             <!-- Password input -->
             <div class="form-outline mb-4">
+              <label class="form-label left-label" for="form2Example2">Password</label>
               <input type="password" class="form-control" formControlName="password" />
-              <label class="form-label" for="form2Example2">Password</label>
             </div>
   
             <!-- 2 column grid layout for inline styling -->
@@ -31,7 +31,7 @@
   
               <div class="col">
                 <!-- Simple link -->
-                <a href="#!">Forgot password?</a>
+                <a >Forgot password?</a>
               </div>
             </div>
   
