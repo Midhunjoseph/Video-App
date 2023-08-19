@@ -1,0 +1,31 @@
+/* Main container for video streams */
+.video-container {
+    display: inline-block;
+    margin: 10px;
+    position: relative; /* Required for absolute positioning of videos */
+}
+
+/* Style the videos */
+video {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Style the bottom toolbar */
+.bottom-toolbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.toolbar-icon {
+    margin: 0 10px;
+}
+
+.icon-style{
+    font-size: 26px;
+}
+
+
+

@@ -12,13 +12,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { VcConstants } from './utils/vc-Constants';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HomeComponent } from './components/home/home.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
+import { VideoComponent } from './components/video/video.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +34,10 @@ import { HomeComponent } from './components/home/home.component';
     ReactiveFormsModule,
     HttpClientModule,
     MatSnackBarModule,
+    MatIconModule,
+    MatListModule,
+    MatToolbarModule,
+    MatCardModule
     
   ],
   providers: [VcApiConstants, VcConstants],

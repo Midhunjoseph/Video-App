@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-auto video-container">
+            <video #localVideo autoplay playsinline></video>
+        </div>
+        <div class="col-auto video-container" *ngFor="let remoteStream of remoteStreams">
+            <video [srcObject]="remoteStream" autoplay playsinline></video>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center mt-auto">
+        <mat-toolbar class="bottom-toolbar" color="primary">
+            <div class="d-flex justify-content-center align-items-center w-100">
+                <span class="toolbar-icon" (click)="toggleAudio()">
+                    <mat-icon class="icon-style">{{ audioEnabled ? 'mic' : 'mic_off' }}</mat-icon>
+                </span>
+                <span class="toolbar-icon" (click)="toggleVideo()">
+                    <mat-icon class="icon-style">{{ videoEnabled ? 'videocam' : 'videocam_off' }}</mat-icon>
+                </span>
+                <span class="toolbar-icon" (click)="endCall()">
+                    <mat-icon class="icon-style">call_end</mat-icon>
+                </span>
+            </div>
+        </mat-toolbar>
+    </div>
+</div>

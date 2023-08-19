@@ -5,7 +5,9 @@ import { Injectable } from "@angular/core";
 export class VcConstants {
 
     web_router_link = {
-        sigin: '/login'
+        sigin: '/login',
+        home: '/home',
+        video: '/video',
     }
 
     dialogMessage = {
